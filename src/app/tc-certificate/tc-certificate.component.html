@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="tc-certificate">
+      <div class="certificate-content">
+      <div class="school-info">
+        <p class="info">या प्रमाणपत्रातील कोणत्याही नोंदीत मुख्याध्यापकाखेरीज कोणताही बदल करता येणार नाही. याचे उल्लंघन करणारा शाळेतून काढून टाकण्यास पात्र राहील.
+          तसेच शाळेच्या नावाखाली शाळा मान्यता क्र. तारीख, कालावधी व मान्यता देणारा अधिकारी यांचा उल्लेख नसेल तर प्रमाणपत्र रद्द ठरेल.</p>
+        <p class="school-name">अंतरिचा ज्ञानदीप मालवू नको रे <br> श्री भैरवनाथ शिक्षण प्रसारक मंडळाचे</p>
+        <p class="school-details">कै. जिजाबाई दादासाहेब गावडे विद्यालय पारवडी</p>
+        <p class="school-detail">ता. बारामती, जि. पुणे. पिन ४१३ १३० </p>
+        <div class="logo">
+          <img class="logo" src="assets/img/logo.png" alt="School Logo" />
+
+        </div>
+        <div class="Id">
+           <p class="N">No:1127</p><br>
+           <p class="Num">यु-डायस- २७२५०२०२४०४</p><br>
+           
+           <p class="Numb">विद्यार्थ्यांचा रजि. नं. {{ student?.generalRegisterNumber }}<br>
+            <input type="text" name="studentId" value="{{ student?.generalRegisterNumber }}">
+
+           </p><br>
+           
+        </div>
+        <div>
+            <p class="no">शिक्षण खात्याची मान्यता <br>आदेशाचा क्रमांक</p>
+            
+        </div>
+        <div>
+         <p class="tc">शाळा सोडल्याचा दाखला</p>
+        </div>
+       <div class="detail">
+        (अनुदानि संहिता नियम १७ प्रमाणे)<br>
+        रजि.नं. महाराष्ट्र- ५४३५-९१ (पुणे)<br> माध्य-३ (१४) नमाशा / मान्यता<br>
+        पु.वि. ९१-९२ मा. उपसंचालक, पुणे विभाग
+       </div>
+      </div>
+     
+    
+      <!-- <div class="reg-info">
+        <p>No. 1127</p>
+        <p></p>
+        <p>विद्यार्थ्यांचा रजि. नं. {{ studentId }}</p>
+        <p>शिक्षण खात्याची मान्यता आदेशाचा क्रमांक</p>
+      </div> -->
+      
+    
+      </div><br>
+      <div class="stud">
+      <div class="fields">
+        <div class="field">
+            <label>स्टुडंट आय डी:{{ student?.studentId }}</label>
+
+        </div>
+        <div class="field">
+            <label>यु.आय.डी.नं. <br>(आधार कार्ड नं.):</label>
+        </div>
+        <div class="field">
+            <label>१) विद्यार्थ्यांचे संपूर्ण नांव:{{ student?.adharCard }}</label>
+        </div>
+        <div class="field">
+            <label>२) आईचे नांव:{{ student?.motherName }}</label>
+        </div>
+        <div class="field">
+            <label>३) धर्म, जात व पोटजात<br>
+                (मागासवर्गीय असल्यासच ):{{ student?.cast }}||{{ student?.religion }}</label>
+        </div>
+        
+        <div class="field">
+            <label>४)जन्मस्थळ:{{ student?.placeOfBirth }}</label>
+        </div>
+        <div class="field">
+            <label>५) ख्रिस्ती सनाप्रमाणे जन्म तारीख / अंकी<br> महिना आणि सन / अक्षरी:{{ student?.dateOfBirth }}</label>
+        </div>
+        <div class="field">
+            <label>६) या शाळेत येण्यापूर्वी विद्यार्थी<br>
+                शिकत असलेली शाळा:</label>
+        </div>
+        <div class="field">
+            <label>७) या शाळेत प्रविष्ट झाल्याची तारीख:{{ student?.previousSchool }}</label>
+        </div>
+        <div class="field">
+            <label>८) अभ्यासातील प्रगती:</label>
+        </div>
+        <div class="field">
+            <label>१०) शाळा सोडल्याची तारीख, महिना, <br>सन:{{ student?.leftStandard }}</label>
+        </div>
+        <div class="field">
+            <label>११) कोणत्या इयत्तेत कधीपासून / अंकी <br>शिकत होता-:{{ student?.leftStandard }}</label>
+        </div>
+        <div class="field">
+            <label>१२) शाळा सोडल्याचे कारण:{{ student?.reasonForLeaving }}</label>
+        </div>
+        <div class="field">
+            <label>१३) शेरा:</label>
+        </div>
+    </div>
+    
+    </div>
+    <div class="footer">
+        <pre class="sign">दिनांक                             दाखला देण्यात येतो की वरील माहिती शाळेतील जनरल रजिस्टर प्रमाणे आहे.
+            
+
+            
+                   लेखनिक                        वर्गशिक्षक                   मुख्याध्यापक </pre>
+           
+        
+    </div>
+    
+</div>
+</div>
+

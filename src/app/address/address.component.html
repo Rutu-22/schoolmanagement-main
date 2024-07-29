@@ -1,0 +1,21 @@
+<div>
+    <h2>Add Address</h2>
+    <form [formGroup]="addressForm" (ngSubmit)="submitAddress()">
+      <input type="text" formControlName="street" placeholder="Street">
+      <input type="text" formControlName="city" placeholder="City">
+      <input type="text" formControlName="state" placeholder="State">
+      <input type="text" formControlName="postal_code" placeholder="Postal Code">
+      <button type="submit">Add Address</button>
+    </form>
+  </div>
+  
+  <div>
+    <h2>Addresses</h2>
+    <ul>
+      <li *ngFor="let address of addresses">
+        {{ address.street }}, {{ address.city }}, {{ address.state }} {{ address.postal_code }}
+        <button (click)="editAddress(address)">Edit</button>
+        <button (click)="deleteAddress(address)">Delete</button>
+      </li>
+    </ul>
+  </div>

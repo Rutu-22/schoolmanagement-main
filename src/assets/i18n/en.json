@@ -1,0 +1,22 @@
+{
+    "Student Registration": "Student Registration",
+    "First Name:": "First Name:",
+    "Middle Name:": "Middle Name:",
+    "Last Name:": "Last Name:",
+    "Mobile No:": "Mobile Number:",
+    "Email": "Email",
+    "Password": "Password",
+    "Confirm Password": "Confirm Password",
+    "Date of Birth:":"Date of Birth",
+    "Gender": "Sex",
+    "Admission Date:": "Admission Date:",
+    "Class of Admission:": "Class of Admission:",
+    "Division:": "Division:",
+    "Cast:": "Cast:",
+    "Religion:": "Dharma:",
+    "Select Gender": "Select Gender",
+    "Select Cast": "Select Cast",
+    "Select Religion": "Select Religion",
+    "Register": "Register",
+    "Student Details":"Student Details" 
+  }

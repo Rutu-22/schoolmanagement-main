@@ -1,0 +1,112 @@
+<div class="container">
+  <h2>Student Details</h2><br>
+  <div class="search-box">
+    <input type="text" placeholder="Search by Name" [(ngModel)]="searchName"><br><br>
+    <input type="text" placeholder="Search by Academic Year" [(ngModel)]="searchAcademicYear">
+    <span class="btn"><button (click)="searchStudents()">Search</button></span>
+  </div><br>
+  <table class="table-bordered">
+    <thead>
+      <tr>
+        <th>General Register Number</th>
+        <th>StudentId</th>
+        <th>Adhar Card (UID)</th>
+        <th>Student Full Name</th>
+        <th>Mother Name</th>
+        <th>Nationality</th>
+        <th>Address</th>
+        <th>Mobile No</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Place of Birth</th>
+        <th>Gender</th>
+        <th>Previous School</th>
+        <th>Reason for Leaving School</th>
+        <th>Standard and Division from which left</th>
+        <th>Admission Date</th>
+        <th>Academic Year</th>
+        <th>Class of Admission</th>
+        <th>Division</th>
+        <th>Religion</th>
+        <th>Caste</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="displayRow && !isEditMode; else editRow; trackBy: trackByIndex">
+        <td>{{ student?.generalRegisterNumber }}</td>
+        <td>{{ student?.studentId }}</td>
+        <td>{{ student?.adharCard }}</td>
+        <td>{{ student?.fullName }}</td>
+        <td>{{ student?.motherName }}</td>
+        <td>{{ student?.nationality }}</td>
+        <td>{{ student?.address }}</td>
+        <td>{{ student?.mobileNo }}</td>
+        <td>{{ student?.inputEmailAddress }}</td>
+        <td>{{ student?.dateOfBirth }}</td>
+        <td>{{ student?.placeOfBirth }}</td>
+        <td>{{ student?.Gender }}</td>
+        <td>{{ student?.previousSchool }}</td>
+        <td>{{ student?.reasonForLeaving }}</td>
+        <td>{{ student?.leftStandard }}</td>
+        <td>{{ student?.admissionDate }}</td>
+        <td>{{ student?.academicYear }}</td>
+        <td>{{ student?.division }}</td>
+        <td>{{ student?.classOfAdmission }}</td>
+        <td>{{ student?.cast }}</td>
+        <td>{{ student?.religion }}</td>
+        <td>
+          <!-- <button class="btn btn-primary" (click)="generateTC()">Tc</button>
+          <button class="btn btn-primary" (click)="generateBonafide()">Bonafide</button> -->
+          <a [routerLink]="['/bonafide-certificate']" [queryParams]="{ student: student }" routerLinkActive="active">
+            Bonafide Certificate
+          </a>
+          
+          <a routerLink="/tc" routerLinkActive="active">
+             TC Certificate
+          </a>
+          <button class="btn btn-primary" (click)="navigateToBonafide(student)">Bonafide Certificate</button>
+          <button class="btn btn-primary" (click)="editStudent(student)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteStudent(selectedStudent?.id)">Delete</button>
+
+        </td>
+      </tr>
+      
+      <ng-template #editRow>
+        <tr>
+          <td colspan="21"> 
+          <form [formGroup]="registrationForm" class="edit-form">
+          <td><input type="number" formControlName="generalRegisterNumber"></td>
+          <td><input type="number" formControlName="studentId"></td>
+          <td><input type="number" formControlName="adharCard"></td>
+          <td><input type="text" formControlName="fullName"></td>
+          <td><input type="text" formControlName="motherName"></td>
+          <td><input type="text" formControlName="nationality"></td>
+          <td><input type="text" formControlName="address"></td>
+          <td><input type="tel" formControlName="mobileNo"></td>
+          <td><input type="email" formControlName="mobileNo"></td>
+          <td><input type="date" formControlName="dateOfBirth"></td>
+          <td><input type="text" formControlName="placeOfBirth"></td>
+          <td><input type="text" formControlName="Gender"></td>
+          <td><input type="text" formControlName="previousSchool"></td>
+          <td><input type="text" formControlName="reasonForLeaving"></td>
+          <td><input type="text" formControlName="leftStandard"></td>
+          <td><input type="date" formControlName="admissionDate"></td>
+          <td><input type="text" formControlName="academicYear"></td>
+          <td><input type="text" formControlName="classOfAdmission"></td>
+          <td><input type="text" formControlName="division"></td>
+          <td><input type="text" formControlName="cast"></td>
+          <td><input type="text" formControlName="religion"></td>
+          <td>
+            <button class="btn btn-success" (click)="saveStudent()">Save</button>
+            <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+          </td>
+        </form>
+      </td>
+        </tr>
+      </ng-template>
+      
+    </tbody>
+  </table>
+  <router-outlet></router-outlet>
+</div>

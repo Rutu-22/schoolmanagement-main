@@ -1,0 +1,207 @@
+<div class="container">
+  <h1>Student Registration</h1>
+  <form [formGroup]="registrationForm" (ngSubmit)="submitForm()">
+    <div class="name-section">
+      <div class="form-group">
+        <label for="generalRegisterNumber">General Register Number:</label>
+        <input type="number" class="form-control" id="generalRegisterNumber" formControlName="generalRegisterNumber" placeholder="Enter general register number" inputmode="numeric">
+        <div *ngIf="registrationForm.get('generalRegisterNumber').invalid && registrationForm.get('generalRegisterNumber').touched">
+          General Register Number is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="studentId">StudentId:</label>
+        <input type="number" class="form-control" id="studentId" formControlName="studentId" placeholder="studentId">
+        <div *ngIf="registrationForm.get('studentId').invalid && (registrationForm.get('studentId').touched || registrationForm.get('studentId').dirty)">
+          studentId is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="adharCard">Adhar Card (UID):</label>
+        <input type="number" class="form-control" id="adharCard" formControlName="adharCard" placeholder="Enter Aadhar card number">
+        <div *ngIf="registrationForm.get('adharCard').invalid && registrationForm.get('adharCard').touched">
+          <div *ngIf="registrationForm.get('adharCard').hasError('required')">Aadhar card number is required.</div>
+          <div *ngIf="registrationForm.get('adharCard').hasError('pattern')">Please enter a valid 12-digit Aadhar card number.</div>
+        </div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="fullName">Student Full Name:</label>
+        <input type="text" class="form-control" id="fullName" formControlName="fullName" placeholder="Enter full name">
+        <div *ngIf="registrationForm.get('fullName').invalid && (registrationForm.get('fullName').touched || registrationForm.get('fullName').dirty)">
+          Full name is required.
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label for="motherName">Mother Name:</label>
+      <input type="text" class="form-control" id="motherName" formControlName="motherName" placeholder="Enter mother's name">
+      <div *ngIf="registrationForm.get('motherName').invalid && registrationForm.get('motherName').touched">
+        Mother's name is required.
+      </div>
+    </div>
+
+    
+
+    <div class="form-group">
+      <label for="nationality">Nationality:</label>
+      <input type="text" class="form-control" id="nationality" formControlName="nationality" placeholder="Enter nationality" pattern="[Ii]ndian">
+      <div *ngIf="registrationForm.get('nationality').invalid && registrationForm.get('nationality').touched">
+        Nationality is required and should be 'Indian'.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" class="form-control" id="address" formControlName="address" placeholder="Enter address">
+      <div *ngIf="registrationForm.get('address').invalid && registrationForm.get('address').touched">
+        Address is required.
+      </div>
+    </div>
+    
+
+    <div class="form-group">
+      <label for="mobileNo">Mobile No:</label>
+      <input type="tel" class="form-control" id="mobileNo" formControlName="mobileNo" placeholder="Enter mobile number">
+      <div *ngIf="registrationForm.get('mobileNo').invalid && (registrationForm.get('mobileNo').touched || registrationForm.get('mobileNo').dirty)">
+        Mobile number is required.
+        <div *ngIf="registrationForm.get('mobileNo').errors?.pattern">
+          Please enter a valid 10-digit mobile number.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputEmailAddress">Email</label>
+      <input class="form-control" id="inputEmailAddress" type="email" formControlName="inputEmailAddress" aria-describedby="emailHelp" placeholder="Enter email address">
+      <div *ngIf="registrationForm.get('inputEmailAddress').invalid && (registrationForm.get('inputEmailAddress').touched || registrationForm.get('inputEmailAddress').dirty)">
+        <div *ngIf="registrationForm.get('inputEmailAddress').errors?.required">
+          Email address is required.
+        </div>
+        <div *ngIf="registrationForm.get('inputEmailAddress').errors?.email">
+          Please enter a valid email address.
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+      <div *ngIf="registrationForm.get('dateOfBirth').invalid && (registrationForm.get('dateOfBirth').touched || registrationForm.get('dateOfBirth').dirty)">
+        Date of birth is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="placeOfBirth">Place of Birth:</label>
+      <input type="text" class="form-control" id="placeOfBirth" formControlName="placeOfBirth" placeholder="Enter place of birth">
+      <div *ngIf="registrationForm.get('placeOfBirth').invalid && registrationForm.get('placeOfBirth').touched">
+        Place of birth is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="Gender">Gender:</label>
+      <select class="form-control" id="Gender" formControlName="Gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <div *ngIf="registrationForm.get('Gender').invalid && (registrationForm.get('Gender').touched || registrationForm.get('Gender').dirty)">
+        Gender is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="previousSchool">Previous School:</label>
+      <input type="text" class="form-control" id="previousSchool" formControlName="previousSchool" placeholder="Enter previous school name">
+      <div *ngIf="registrationForm.get('previousSchool').invalid && registrationForm.get('previousSchool').touched">
+        Previous school name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="reasonForLeaving">Reason for Leaving School:</label>
+      <textarea class="form-control" id="reasonForLeaving" formControlName="reasonForLeaving" placeholder="Enter reason for leaving school"></textarea>
+      <div *ngIf="registrationForm.get('reasonForLeaving').invalid && (registrationForm.get('reasonForLeaving').touched || registrationForm.get('reasonForLeaving').dirty)" class="error-message">
+        Reason for leaving school is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="leftStandard">Standard and Division from which left:</label>
+      <input type="text" class="form-control" id="leftStandard" formControlName="leftStandard" placeholder="Enter standard and division">
+      <div *ngIf="registrationForm.get('leftStandard').invalid && (registrationForm.get('leftStandard').touched || registrationForm.get('leftStandard').dirty)" class="error-message">
+        Standard and division from which left is required.
+      </div>
+    </div>
+  
+    
+    <div class="form-group">
+      <label for="admissionDate">Admission Date:</label>
+      <input type="date" class="form-control" id="admissionDate" formControlName="admissionDate">
+      <div *ngIf="registrationForm.get('admissionDate').invalid && (registrationForm.get('admissionDate').touched || registrationForm.get('admissionDate').dirty)">
+        Admission date is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="academicYear">Academic Year:</label>
+      <select class="form-control" id="academicYear" formControlName="academicYear">
+        <option value="null" disabled selected>Select Academic Year</option>
+        <option *ngFor="let year of academicYears" [value]="year">{{year}}</option>
+      </select>
+      <div *ngIf="registrationForm.get('academicYear').invalid && (registrationForm.get('academicYear').touched || registrationForm.get('academicYear').dirty)">
+        Academic year is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="classOfAdmission">Class of Admission:</label>
+      <input type="text" class="form-control" id="classOfAdmission" formControlName="classOfAdmission" placeholder="Enter the class of admission">
+      <div *ngIf="registrationForm.get('classOfAdmission').invalid && (registrationForm.get('classOfAdmission').touched || registrationForm.get('classOfAdmission').dirty)">
+        Class of admission is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="division">Division:</label>
+      <input type="text" class="form-control" id="division" formControlName="division" placeholder="Enter division">
+      <div *ngIf="registrationForm.get('division').invalid && (registrationForm.get('division').touched || registrationForm.get('division').dirty)">
+        Division is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="religion">Religion:</label>
+      <select class="form-control" id="religion" formControlName="religion">
+        <option value="">Select Religion</option>
+        <option value="Hindu">Hindu</option>
+        <option value="Muslim">Muslim</option>
+        <option value="Jain">Jain</option>
+        <option value="Other">Other</option>
+      </select>
+      <div *ngIf="registrationForm.get('religion').invalid && (registrationForm.get('religion').touched || registrationForm.get('religion').dirty)">
+        Religion is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="cast">Caste:</label>
+      <select class="form-control" id="cast" formControlName="cast">
+        <option value="">Select Cast</option>
+        <option value="ST">ST</option>
+        <option value="OBC">OBC</option>
+        <option value="General">General</option>
+        <option value="Other">Other</option>
+      </select>
+      <div *ngIf="registrationForm.get('cast').invalid && (registrationForm.get('cast').touched || registrationForm.get('cast').dirty)">
+        Cast is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+  </form>
+</div>

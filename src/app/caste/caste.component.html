@@ -1,0 +1,19 @@
+<!-- caste.component.html -->
+<div>
+    <h2>Add Caste</h2>
+    <form [formGroup]="casteForm" (ngSubmit)="submitCaste()">
+      <input type="text" formControlName="name" placeholder="Caste Name"><br><br>
+      <button type="submit">Add Caste</button>
+    </form>
+  </div>
+  
+  <div>
+    <h2>Castes</h2>
+    <ul>
+      <li *ngFor="let caste of castes">
+        {{ caste.name }} - {{ caste.description }}
+        <button (click)="editCaste(caste)">Edit</button>
+        <button (click)="deleteCaste(caste)">Delete</button>
+      </li>
+    </ul>
+  </div>

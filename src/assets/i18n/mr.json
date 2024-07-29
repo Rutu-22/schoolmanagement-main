@@ -1,0 +1,99 @@
+{
+  "Student Registration": "विद्यार्थी प्रवेश",
+  "First Name:": "पहिलं नाव:",
+  "Enter your first name": "तुमचं पहिलं नाव प्रविष्ट करा",
+  "Please enter a valid first name (only alphabetic characters)": "कृपया एक वैध पहिलं नाव टाइप करा (केवळ अक्षरे)",
+  "First name is required.": "पहिलं नाव आवश्यक आहे.",
+  "Middle Name:": "मध्यम नाव:",
+  "Enter your middle name": "तुमचं मध्यम नाव प्रविष्ट करा",
+  "Please enter a valid middle name (only alphabetic characters)": "कृपया एक वैध मध्यम नाव टाइप करा (केवळ अक्षरे)",
+  "Middle name is required.": "मध्यम नाव आवश्यक आहे.",
+  "Last Name:": "आडनाव:",
+  "Enter your last name": "तुमचं आडनाव प्रविष्ट करा",
+  "Please enter a valid last name (only alphabetic characters)": "कृपया एक वैध आडनाव टाइप करा (केवळ अक्षरे)",
+  "Last name is required.": "आडनाव आवश्यक आहे.",
+  "Mobile No:": "मोबाइल नंबर:",
+  "Enter your mobile number": "तुमचा मोबाइल नंबर प्रविष्ट करा",
+  "Please enter a valid 10-digit mobile number": "कृपया एक वैध 10-अंकी मोबाइल नंबर प्रविष्ट करा",
+  "Mobile number is required.": "मोबाइल नंबर आवश्यक आहे.",
+  "Email:": "ईमेल",
+  "Enter email address": "ईमेल पत्ता प्रविष्ट करा",
+  "Email address is required.": "ईमेल पत्ता आवश्यक आहे.",
+  "Invalid email address.": "अवैध ईमेल पत्ता.",
+    "Password:": "पासवर्ड",
+    "Enter password":"तुमचा पासवर्ड प्रविष्ट करा",
+    "Password is required.": "पासवर्ड आवश्यक आहे.",
+    "Confirm Password:": "पासवर्डची पुष्टी करा",
+    "Confirm password":"पासवर्डची पुष्टी करा",
+    "Confirm password is required.": "पासवर्ड पुष्टी आवश्यक आहे.",
+    "Password and confirm password do not match.":"पासवर्ड आणि कन्फर्म पासवर्ड जुळत नाहीत.",
+    "Date of Birth:": "जन्मतारीख:",
+    "Date of birth is required.": "जन्मतारीख आवश्यक आहे.",
+
+    "Gender:": "लिंग:",
+    "Gender is required.": "लिंग आवश्यक आहे.",
+
+    "Admission Date:": "प्रवेश तारीख:",
+    "Admission date is required.": "प्रवेश तारीख आवश्यक आहे.",
+
+    "Class of Admission:": "प्रवेशाची वर्ग:",
+    "Enter the class of admission":"तुमचा प्रवेशाची वर्ग प्रविष्ट करा",
+    "Class of admission is required.": "प्रवेशाची वर्ग आवश्यक आहे.",
+
+    "Division:": "विभाग:",
+    "Enter your division":"तुमचा विभाग प्रविष्ट करा",
+    "Division is required.": "विभाग आवश्यक आहे.",
+
+    "Cast:": "जात:",
+    "Cast is required.": "जात आवश्यक आहे.",
+
+    "Religion:": "धर्म:",
+    "Religion is required.": "धर्म आवश्यक आहे.",
+
+    "Select Gender": "लिंग निवडा",
+    "Male":"पुरुष",
+     "Female":"स्त्री",
+     "Other":"इतर",
+    "Select Cast": "जात निवडा",
+    "ST":"एसटी",
+    "OBC":"ओबीसी",
+    "General":"सामान्य",
+    "Select Religion": "धर्म निवडा",
+    "Hindu":"हिंदू",
+    "Muslim":"मुस्लिम",
+    "Jain":"जैन",
+    "Register": "नोंदणी करा",
+
+    "Student Details":"विद्यार्थी तपशील" ,
+    "First Name":"पहिलं नाव",
+    "Middle Name": "मध्यम नाव",
+  "Last Name": "आडनाव",
+  "Mobile No": "मोबाइल नंबर",
+  "Email": "ईमेल",
+    "Password": "पासवर्ड",
+    "Confirm Password": "पासवर्डची पुष्टी करा",
+
+    "Date of Birth": "जन्मतारीख",
+
+    "Gender": "लिंग",
+
+
+    "Admission Date": "प्रवेश तारीख",
+
+    "Class of Admission": "प्रवेशाची वर्ग",
+
+    "Division": "विभाग",
+
+    "Cast": "जात",
+
+    "Religion": "धर्म",
+    "Actions":"क्रिया",
+    "Edit":"सुधारणे",
+    "Delete":"हटवा",
+    "Cancel":"रद्द करा",
+    "Save":"जतन करा"
+
+    
+
+  }
+  

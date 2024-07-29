@@ -1,0 +1,18 @@
+<div>
+    <h2>Add Division</h2>
+    <form [formGroup]="divisionForm" (ngSubmit)="submitDivision()">
+      <input type="text" formControlName="name" placeholder="Division Name"><br><br>
+      <button type="submit">Add Division</button>
+    </form>
+</div>
+  
+<div>
+    <h2>Divisions</h2>
+    <ul>
+        <li *ngFor="let division of divisions">
+            {{ division.name }} 
+            <button (click)="editDivision(division)">Edit</button>
+            <button (click)="deleteDivision(division)">Delete</button>
+        </li>
+    </ul>
+</div>

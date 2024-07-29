@@ -1,0 +1,19 @@
+<div class="header" [ngClass]="{ sidebarExpanded: !sidebarExpanded }">
+  <app-top-bar></app-top-bar>
+</div>
+<div class="left-content">
+  <app-left-nav-bar
+    [isExpanded]="sidebarExpanded"
+    (toggleSidebar)="sidebarExpanded = !sidebarExpanded"
+  ></app-left-nav-bar>
+</div>
+
+<div class="content" [ngClass]="{ sidebarExpanded: sidebarExpanded }" role="main">
+  <router-outlet></router-outlet>
+  <div class="student-registration" *ngIf="sidebarExpanded">
+    <router-outlet name="studentRegistration"></router-outlet>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

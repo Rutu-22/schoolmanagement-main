@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "http://localhost:91",
+      "secure": false,
+      "logLevel": "error",
+      "changeOrigin": true
+      }
+  }

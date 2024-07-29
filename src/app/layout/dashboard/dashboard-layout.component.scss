@@ -1,0 +1,27 @@
+.content {
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 4rem;
+  &.sidebarExpanded {
+    margin-left: 13rem;
+  }
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  margin-left: 0rem;
+  &.sidebarExpanded {
+    margin-left: 4rem;
+  }
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 2rem;
+  background-color: white;
+  box-shadow: 0 0.15rem 1.75rem 0 rgb(58 59 69 / 15%) !important;
+  width: 100%;
+  margin-left: 12rem;
+}
